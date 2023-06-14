@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Configuration</title>
+    <link rel="stylesheet" href="Cofing.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+    <link rel="stylesheet" href="fontawesome-free-5.15.4-web/css/all.css">
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <nav class="nav">
+        <div class="logo-div">
+            <div class="logo-brackets"><h3>{</h3></div>
+            <a href="#" class="nav_logo">Programmers Force</a>
+            <div class="logo-brackets"><h3>}</h3></div>
+        </div>
+
+        <ul class="nav_items">
+          <li class="nav_item">
+            <a href="loginPage.html" class="nav_link">Home</a>
+            <a href="dashboard.html" class="nav_link">Dashboard</a>
+            <a href="ConfigPage.html" class="nav_link">Configuration</a>
+            <a href="membertbl.html" class="nav_link">Members</a>
+            <a href="#" class="nav_link">Contact</a>
+          </li>
+        </ul>
+      </nav>
+
+    </header>
+
+      <div class="formsContainer">
+        <div class="config_form">
+
+          <form action="#">
+            <div class="form-head">
+              <h2>Permissions</h2>
+            </div>
+
+            <div class="input_box">
+              <div class="input_label">
+                <label for="timezone">Redirect to Dashboard</label>
+              </div>
+             
+              <select id="time" name="timezone">
+                <option value="auto">Admin Dashboard</option>
+                <option value="usa">Collaborator Dashboard</option>
+                <option value="cnd">Sales Dashboarrd</option>
+              </select>
+            </div>
+
+            <!-- Toggle Buttons -->
+            <div class="input_box">
+              <div class="input_label">
+                <label for="toggle">Allow Adding Collaborators?</label>
+              </div>
+              
+              <div class="options">
+              <input id="toggle-on" name="url" type="radio">
+              <label id="btn" name="radio-btn" for="toggle-on">Yes</label>
+              <input id="toggle-off" name="url" type="radio">
+              <label id="btn" name="radio-btn" for="toggle-off">No.</label>
+              </div>
+            </div>
+
+            <!-- Checkbox Box -->
+            <div class="input_box">
+              <div class="input_label">
+                <label for="check">Allow Removing Collaborators?</label>
+              </div>
+              <div class="check_boxes">
+                <div class="checks">
+                  <input class="checkbox" type="checkbox" name="pg-evnt" id="pg-evnt">
+                  <label for="pg-evnt">Yes Allow</label>
+                </div>
+
+                <div class="checks">
+                  <input class="checkbox" type="checkbox" name="twig-evnt" id="twig-evnt">
+                  <label for="twig-evnt">Dont Allow</label>
+                </div>
+              </div>
+
+            </div>
+            
+            <!-- Events Toggle -->
+            <div class="input_box">
+              <div class="input_label">
+                <label for="check">Allow Collaborator List view?</label>
+              </div>
+              <div class="check_boxes">
+                <div class="checks">
+                  <input class="checkbox" type="checkbox" name="pg-evnt" id="pg-evnt">
+                  <label for="pg-evnt">Yes Allow</label>
+                </div>
+                <div class="checks">
+                  <input class="checkbox" type="checkbox" name="twig-evnt" id="twig-evnt">
+                  <label for="twig-evnt">Don't Allow</label>
+                </div>
+              </div>
+            </div>
+
+            <!-- Select display date -->
+            <div class="input_box">
+              <div class="input_label">
+                <label for="check">Allow List Update ?</label>
+              </div>
+              <div class="check_boxes">
+                <div class="checks">
+                  <input class="checkbox" type="checkbox" name="pg-evnt" id="pg-evnt">
+                  <label for="pg-evnt">Yes Allow</label>
+                </div>
+                <div class="checks">
+                  <input class="checkbox" type="checkbox" name="twig-evnt" id="twig-evnt">
+                  <label for="twig-evnt">Don't Allow</label>
+                </div>
+              </div>
+            </div>
+            <!-- Toggle Buttons For ordering -->
+            <div class="input_box">
+              <div class="input_label">
+                <label for="check">Allow Deleting data ?</label>
+              </div>
+              <div class="check_boxes">
+                <div class="checks">
+                  <input class="checkbox" type="checkbox" name="pg-evnt" id="pg-evnt">
+                  <label for="pg-evnt">Yes Allow</label>
+                </div>
+                <div class="checks">
+                  <input class="checkbox" type="checkbox" name="twig-evnt" id="twig-evnt">
+                  <label for="twig-evnt">Don't Allow</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="input_box">
+              <div class="button_box">
+                <button type="submit">Save</button>
+              </div>
+            </div>
+
+          </form>
+
+      </div>
+      </div>
+    </body>
+</html>
