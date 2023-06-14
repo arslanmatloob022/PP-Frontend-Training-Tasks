@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>
+    function myFunction() {
+      var x = document.getElementById("secondnav");
+      if (x.className === "sectopnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "sectopnav";
+      }
+    }
+  </script>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="landingPage.css">
+    <link rel="stylesheet" href="topnavbar.css">
+    <link rel="stylesheet" href="fontawesome-free-5.15.4-web/css/all.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/Hecta.png">
+    <title>Dot Shop</title>
+</head>
+
+<body>
+	<!-- Navbars -->
+  <div class="uppertopnav" id="Home">
+    <div class="logo-div">
+      <img class="logo-image" src="images/Hecta.png">
+      <p class="logo-name">DotShop</p>
+    </div>
+
+    <div class="input-box">
+      <i class="fa fa-search fa-3x"></i>
+      <input type="text" placeholder="Search..." />
+      <button class="button">Search</button>
+    </div>
+    
+  </div>
+
+  <div class="sectopnav" id="secondnav">
+    <a href="javascript:void(0);" id="icon-btn" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars fa-2x"></i>
+    </a>
+    <a href="#default">About Us</a>
+    <a href="#default">Login</a>
+    <a href="#default">View Cart</a>
+    <a href="#offersContainer">Offers</a>
+    <a href="#Home">Home</a>
+  </div>
+
+	<!--Carasoul Container-->
+	<div class="Carasoul">
+          <img class="caras-img" src="images/pen-4337521.jpg" alt="">
+	</div>
+
+    <div class="head-div">
+        <h2>Avail Our Offers</h2>
+    </div>
+
+<!-- Offer Container -->
+
+	<div class="offersContainer" id="offersContainer">
+        <div class="main-card">
+            <img class="card-img" src="images/laptop-6856557.jpg" alt="">
+            <div class="card-body">
+                <h4 class="card-title">Laptops</h4>
+                <p class="card-text">25% OFF</p>
+            </div>
+            <a href="CartView.html"><button class="Card-button">Get Offer</button></a>
+        </div>
+
+        <div class="main-card">
+            <img class="card-img" src="images/iphone-563067.jpg" alt="">
+            <div class="card-body">
+            <h4 class="card-title">Mobiles</h4>
+            <p class="card-text">25% OFF</p>
+            </div>
+            <a href="CartView.html"><button class="Card-button">Get Offer</button></a>
+        </div>
+
+        <div class="main-card">
+            <img class="card-img" src="images/flash-memory-1306886.jpg" alt="" >
+            <div class="card-body">
+            <h4 class="card-title">Accesories</h4>
+            <p class="card-text">10% OFF</p>
+            </div>
+            <a href="CartView.html"><button class="Card-button">Get Offer</button></a>
+        </div>
+
+        <div class="main-card">
+        <img class="card-img" src="images/samsung-605439.jpg" alt="">
+        <div class="card-body">
+            <h4 class="card-title">Parts</h4>
+            <p class="card-text">30% OFF</p>
+        </div>
+        <a href="CartView.html"><button class="Card-button">Get Offer</button></a>
+        </div>
+
+	</div>
+
+
+    <!-- Footer  -->
+    <div class="head-div">
+        <h2>Any Query</h2>
+    </div>
+    <footer>
+        <div class="footer-card">
+            <div class="card-header">Social Platform</div>
+            <div class="card-body">
+                <div class="card-subtitle">
+                    <i class="icons fab fa-instagram fa-2x icons" aria-hidden="true"></i>
+                    <a class="links" href="https://www.instagram.com">Follow our Instagram<a>
+                </div>
+
+                <div class="card-subtitle">
+                    <i class="icons fab fa-twitter fa-2x" aria-hidden="true"></i>
+                    <a class="links" href="https://www.twitter.com">Follow our Twitter<a>
+                </div>
+                
+                <div class="card-subtitle">
+                    <i class="icons fab fa-facebook fa-2x" aria-hidden="true"></i>
+                    <a class="links" href="https://www.twitter.com">Follow our Facebook<a>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="footer-card">
+            <div class="card-header">Visit Us</div>
+            <div class="card-body">
+                <div class="card-subtitle">
+                    <i class="icons fa fa-road fa-2x icons" aria-hidden="true"></i>
+                    <address class="links" href="https://www.instagram.com">P.No 893,
+                        Johar Town, Lahore
+                    </address>
+                </div>
+
+                <div class="card-subtitle">
+                    <i class="icons fa fa-location-arrow fa-2x" aria-hidden="true"></i>
+                    <a class="links" href="https://www.google.com/maps?q=Seattle">Google Location<a>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="footer-card">
+            <div class="card-header">For Queries</div>
+            <div class="card-body">
+                <div class="card-subtitle">
+                    <i class="icons fa fa-mail-bulk fa-2x" aria-hidden="true"></i>
+                    <a class="links" href="mailto:raoarslan263@gmail.com">Mail us<a>
+                </div>
+
+                <div class="card-subtitle">
+                    <i class="icons fa fa-phone fa-2x" aria-hidden="true"></i>
+                    <a class="links" href="tel:+923007626555">Cell Phone<a>
+                </div>
+                
+                <div class="card-subtitle">
+                    <i class="icons fa fa-fax fa-2x" aria-hidden="true"></i>
+                    <a class="links" href="fax:+1234567890">Fax Address<a>
+                </div>
+                
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>
