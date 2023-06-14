@@ -1,0 +1,108 @@
+.Sidebar{
+    width: 100%;
+    transition: marging-left 0.4s;
+    z-index: 1;
+    
+}
+.side-nav{
+    width: 70px;
+    height: 90%;
+    position: fixed;
+    top: 80px;
+    left: 0;
+    padding: 30px 15px;
+    background: rgba(36,65,185,1.0);
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    transition: width 0.20s;
+    z-index: 1000;
+}
+.user{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 60px;
+    font-size: 12px;
+    padding: 10px;
+    border-radius: 8px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    z-index: 1000;
+}
+.user div{
+    display: none ;
+    z-index: 1000;
+}
+.user h2{
+    color: whitesmoke;
+    font-size: 15px;
+    font-weight: 600;
+    white-space: nowrap;
+    z-index: 1000;
+}
+.user-img{
+    width: 40px;
+    border-radius: 50%;
+    margin: auto;
+    z-index: 1000;
+}
+.star-img{
+    width: 20px;
+    display: none;
+    z-index: 1000;
+}
+ul{
+    list-style: none;
+    padding: 0 15px;
+    z-index: 1000;
+}
+ul li{
+    margin: 50px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+ul li i{
+    color: rgb(255, 255, 255);
+    width: 30px;
+    margin-right: 0px;
+}
+ul li p{
+    white-space: nowrap;
+    display: none;
+    color: white;
+    font:bold;
+}
+.side-nav:hover{
+    width: 250px;
+} 
+.side-nav:hover .user div{
+    display: block;
+}
+
+.side-nav:hover .user{
+    width: 100%;
+    background: rgba(18,216,121,1.0);
+}
+.side-nav:hover .star-img{
+    display: block;
+}
+.side-nav:hover .user-img{
+    margin: 0 ;
+}
+.side-nav:hover ul li p{
+    margin-top: 10px;
+    display: block;
+}
+.side-nav:hover ul li i{
+    color: rgba(18,216,121,1.0);
+    margin-right: 10px;
+}
+.side-nav:hover ul li{
+    margin: 30px 0;
+    justify-content: flex-start;
+    transition: 0.30s;
+}
