@@ -1,0 +1,88 @@
+
+
+/* Login Page Styling */
+
+.card{
+    background-color: antiquewhite;
+    text-align: center;
+    height: 360px;
+    width: 300px;
+}
+#login-container{
+    background-color: whitesmoke;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+#login-inputs{
+    margin-top: 30px;
+}
+.loginbtn{
+    margin-top: 20px;
+}
+
+/* Cart Page Styling */
+.cart-card{
+    background-color: antiquewhite;
+    text-align: center;
+    height: 240px;
+    width: 20%;
+
+}
+#cart-container{
+    background-color: whitesmoke;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+}
+#cart-inputs{
+    margin-top: 10px;
+    float: right;
+}
+#cart-image{
+    float: left;
+    margin-left: 5px;
+    width: 30%; 
+    height:36%;
+}
+.card-foot{
+    width: 100%;
+    margin-top: 130px;
+}
+
+.signUpbtn{
+    margin-top: 20px;
+}
+
+/* Product page styling */
+.product-card{
+    background-color: rgb(88, 87, 85);
+    text-align: center;
+    height: 260px;
+    width: 200px;
+}
+.prod-img{
+    margin-top: 10px;
+    width:80%; 
+    height: 40%;
+}
+.product-card{
+    background-color: rgb(61, 61, 59); 
+    margin-top: 20px;
+}
+.products-view-container{
+    margin-top: 20px;
+    height: auto;
+    background-color: antiquewhite;
+    justify-content: space-between; 
+    display: flex;
+    align-items:flex-start;
+}
+.scnd-products-view-container{
+    height: auto;
+    background-color: antiquewhite;
+    justify-content: space-between; 
+    display: flex;
+    align-items:flex-start;
+}

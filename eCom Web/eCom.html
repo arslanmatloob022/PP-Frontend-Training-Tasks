@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>
+    function myFunction() {
+      var x = document.getElementById("secondnav");
+      if (x.className === "sectopnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "sectopnav";
+      }
+    }
+  </script>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="landingPage.css">
+    <link rel="stylesheet" href="topnavbar.css">
+    <link rel="stylesheet" href="fontawesome-free-5.15.4-web/css/all.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/Hecta.png">
+    <title>Dot Shop</title>
+</head>
+
+<body>
+	<!-- Navbars -->
+  <div class="uppertopnav">
+    <div class="logo-div">
+      <img class="logo-image" src="images/Hecta.png">
+      <p class="logo-name">DotShop</p>
+    </div>
+
+    <div class="input-box">
+      <i class="fa fa-search fa-3x"></i>
+      <input type="text" placeholder="Search..." />
+      <button class="button">Search</button>
+    </div>
+    
+  </div>
+
+  <div class="sectopnav" id="secondnav">
+    <a href="javascript:void(0);" id="icon-btn" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars fa-2x"></i>
+    </a>
+    <a href="#default">About Us</a>
+    <a href="#default">Login</a>
+    <a href="#default">View Cart</a>
+    <a href="#default">Account</a>
+    <a href="#default">Home</a>
+  </div>
+
+	<!--Caraousel Container-->
+	<div class="Carasoul">
+    <table>
+      <tr>
+        <td colspan="2">
+          <img class="caras-img" src="images/camera-510530.jpg" alt="Camera">
+        </td>
+
+        <td colspan="5">
+          <img class="caras-img" src="images/earphone-3093921.jpg" alt="">
+        </td>
+      </tr>
+
+      <tr>
+        <td colspan="5">
+          <img class="caras-img" src="images/pen-4337521.jpg" alt="">
+        </td>
+
+        <td colspan="2">
+          <img  class="caras-img" src="images/laptop-5673901.jpg" alt="">
+        </td>
+      </tr>
+
+      <tr>
+        <td colspan="2">
+          <img class="caras-img" src="images/mobile-616012.jpg" alt="">
+        </td>
+        <td colspan="5">
+          <img class="caras-img" src="images/apple-606761.jpg" alt="">
+        </td>
+      </tr>
+      
+    </table>
+	</div>
+
+  <div style="text-align: center; margin-top: 10px;">
+      <h2 style="background-color: orangered; color: aliceblue; backdrop-filter: blur(10px); font-weight: 700;">Avail Our Offers</h2>
+  </div>
+
+
+	<div class="addContainer">
+
+    <div class="main-card">
+      <img class="card-img" src="images/bgimg4.jpg" alt="">
+      <div class="card-body">
+        <h4 class="card-title">Laptops</h4>
+        <p class="card-text">25% OFF</p>
+      </div>
+      <a href="CartView.html"><button class="Card-button">Get Offer</button></a>
+  </div>
+
+    <div class="main-card">
+        <img class="card-img" src="images/bgimg4.jpg" alt="">
+        <div class="card-body">
+          <h4 class="card-title">Laptops</h4>
+          <p class="card-text">25% OFF</p>
+        </div>
+        <a href="CartView.html"><button class="Card-button">Get Offer</button></a>
+    </div>
+
+    <div class="main-card">
+        <img class="card-img" src="images/bgimg4.jpg" alt="" >
+        <div class="card-body">
+          <h4 class="card-title">Accesories</h4>
+          <p class="card-text">10% OFF</p>
+        </div>
+        <a href="CartView.html"><button class="Card-button">Get Offer</button></a>
+    </div>
+
+    <div class="main-card">
+      <img class="card-img" src="images/bgimg4.jpg" alt="">
+      <div class="card-body">
+        <h4 class="card-title">Parts</h4>
+        <p class="card-text">30% OFF</p>
+      </div>
+      <a href="CartView.html"><button class="Card-button">Get Offer</button></a>
+  </div>
+
+	</div>
+</body>
+</html>
