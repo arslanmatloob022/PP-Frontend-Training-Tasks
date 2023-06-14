@@ -1,0 +1,123 @@
+<!-- Select red route -->
+            <div class="input_box">
+              <div class="input_label">
+                <label for="route"> Default Redirect Route</label>
+              </div>
+             
+              <select id="time" name="route">
+                <option value="found">302- Found</option>
+                <option value="not">404- Not Found</option>
+                <option value="ntavl">440- Not Available</option>
+              </select>
+            </div>
+
+            <!-- Toggle Buttons For Slash trailing -->
+            <div class="input_box">
+              <div class="input_label">
+                <label for="slash">Redirect Trailing Slash</label>
+              </div>
+              
+              <div class="options">
+              <input id="redi-slash" name="slash" type="radio">
+              <label id="btn" name="radio-btn" for="redi-slash">Yes</label>
+              <input id="no-redi" name="slash" type="radio">
+              <label id="btn" name="radio-btn" for="no-redi">No</label>
+              </div>
+            </div>
+
+            <!-- Toggle Buttons for ignore hidden -->
+            <div class="input_box">
+              <div class="input_label">
+                <label for="ordertoglle">Ignore Hidden</label>
+              </div>
+              
+              <div class="options">
+              <input id="ignore" name="ordertoglle" type="radio">
+              <label id="btn" name="radio-btn" for="ignore">Yes</label>
+              <input id="dnt-ignore" name="ordertoglle" type="radio">
+              <label id="btn" name="radio-btn" for="dnt-ignore">No</label>
+              </div>
+            </div>
+
+            <!-- text input ignore files -->
+            <div class="input_box">
+              <div class="input_label">
+                <label for="pagecount">Ignore Files</label>
+              </div>
+              <input id="text_inp" placeholder=".DS_store" type="text" name="pagecount">
+            </div>
+
+            <!-- text ignore foldwes -->
+            <div class="input_box">
+              <div class="input_label">
+                <label for="pagecount">Ignore Folders</label>
+              </div>
+              <input id="text_inp" placeholder=".git   .idea" type="text" name="pagecount">
+              
+            </div>
+
+            <!-- Toggle taxonomy filters -->
+            <div class="input_box">
+              <div class="input_label">
+                <label for="urltaxo">Url Taxonomy Filters</label>
+              </div>
+              
+              <div class="options">
+              <input id="filter" name="urltaxo" type="radio">
+              <label id="btn" name="radio-btn" for="filter">Yes</label>
+              <input id="not-filter" name="urltaxo" type="radio">
+              <label id="btn" name="radio-btn" for="not-filter">No</label>
+              </div>
+            </div>
+
+            <!-- Toggle processs twig -->
+            <div class="input_box">
+              <div class="input_label">
+                <label for="ordertoglle">Process Twig First</label>
+              </div>
+              
+              <div class="options">
+              <input id="yestwig" name="ordertoglle" type="radio">
+              <label id="btn" name="radio-btn" for="yestwig">Yes</label>
+              <input id="dontwig" name="ordertoglle" type="radio">
+              <label id="btn" name="radio-btn" for="dontwig">No</label>
+              </div>
+            </div>
+
+            <!-- Toggle cache twig -->
+            <div class="input_box">
+              <div class="input_label">
+                <label for="ordertoglle">Never Cache Twig</label>
+              </div>
+              
+              <div class="options">
+              <input id="twigcache" name="ordertoglle" type="radio">
+              <label id="btn" name="radio-btn" for="twigcache">Yes</label>
+              <input id="notwigcache" name="ordertoglle" type="radio">
+              <label id="btn" name="radio-btn" for="notwigcache">No</label>
+              </div>
+            </div>
+
+            <!-- Toggle taxonomy filters -->
+            <div class="input_box">
+              <div class="input_label">
+                <label for="ordertoglle">Process Frontmetter Twig</label>
+              </div>
+              
+              <div class="options">
+              <input id="yesTax" name="ordertoglle" type="radio">
+              <label id="btn" name="radio-btn" for="yesTax">Yes</label>
+              <input id="noTax" name="ordertoglle" type="radio">
+              <label id="btn" name="radio-btn" for="noTax">No</label>
+              </div>
+            </div>
+
+
+            <div class="input_box">
+              <div class="input_label">
+                <label for="pagecount">Ignore frontmetter fields</label>
+              </div>
+              <input id="text_inp" placeholder=".form   .forms" type="text" name="pagecount">
+            </div>
+
+            

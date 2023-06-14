@@ -1,0 +1,23 @@
+#productionChart, #myChart{
+    width:50%;
+    margin-left: 20px;
+    max-width: 600px; 
+    box-shadow: 0 0 1px rgba(0,0,0,.125), 0 1px 3px rgba(0,0,0,.2);
+}
+#userChrt{
+    height: auto;
+    height: 100%;
+    width:100%;
+    margin-left: 15px;
+    max-width:600px; 
+}
+
+#usersheadings{
+    margin-left:10%;
+    width: 100%;
+    color: rgba(12,12,184, 0.8);
+}
+.row h3{
+    width: 48%;
+    height: 20px;
+}
