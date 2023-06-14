@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <script src="togglesidebar.js"></script>
+  <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="bootstrap-5.0.2-dist/js/bootstrap.min.js">
+  <link rel="stylesheet" href="fontawesome-free-5.15.4-web/css/all.min.css">
+  <link rel="stylesheet" href="dashboard.css">
+  <link rel="stylesheet" href="graphs.css">
+  <link rel="stylesheet" href="header.css">
+  <link rel="stylesheet" href="sidebar.css">
+  <script src="togglesidebar.js"></script>
+</head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+<body>
+  <!-- header -->
+  <header class="header">
+      
+    <nav class="nav">
+      <div class="logo-div">
+          <div class="logo-brackets"><h3>{</h3></div>
+          <a href="#" class="nav_logo">Programmers Force</a>
+          <div class="logo-brackets"><h3>}</h3></div>
+      </div>
+
+      <ul class="nav_items">
+        <li class="nav_item">
+          <a href="loginPage.html" class="nav_link">Home</a>
+          <a href="dashboard.html" class="nav_link">Dashboard</a>
+          <a href="ConfigPage.html" class="nav_link">Configuration</a>
+          <a href="membertbl.html" class="nav_link">Members</a>
+          <a href="#" class="nav_link">Contact</a>
+        </li>
+      </ul>
+
+      <button class="login-button" id="form-open">Login</button>
+    </nav>
+  </header>
+    <div class="header-margin">
+    </div>
+    
+    <!-- Sidebar  -->
+    <div class="Sidebar" id="mySidebar" onmouseover="toggleSidebar()" onmouseout="toggleSidebar()">
+      <div class="side-nav" id="mySidebar">
+          <div class="user">
+              <img src="images/Hecta.png" class="user-img">
+                <div>
+                  <h2>Arslan Matloob</h2>
+                  <p>@raoarslanmatloob</p>
+                </div>
+              <img src="images/Hecta.png" class="star-img">
+          </div>
+          <ul>
+            <li><i class="fa fa-bars fa-1x"></i><p>Dashboard</p></li>
+            <li><i class="fa fa-users fa-1x"></i><p>Members</p></li>
+            <li><i class="fa fa-boxes fa-1x"></i><p>Products</p></li>
+            <li><i class="fab fa-salesforce fa-1x"></i><p>Sales</p></li>
+            <li><i class="fa fa-envelope fa-1x"></i><p>Complaints</p></li> 
+          </ul>
+      </div>
+    </div>
+
+    <div id="main"  class="main">
+      <!-- info boxes -->
+      <div class="row" id="row-info" >
+        <div class="col-md-3 col-sm-6 col-12">
+            <div class="info-box">
+                <span class="info-box-icon"><i class="far fa-heart" style="color: rgba(18,216,121,1.0)"></i></span>
+                <div class="info-box-content">
+                  <span class="info-box-text">Add Favourites</span>
+                  <span class="info-box-number">41,410</span>
+                  <div class="progress">
+                    <div class="progress-bar" style="width: 70%; background-color: rgba(18,216,121,1.0);"></div>
+                  </div>
+                  <span class="progress-description">
+                    70% Increase in 30 Days
+                  </span>
+                </div>
+            </div>
+        </div>
+  
+        <div class="col-md-3 col-sm-6 col-12">
+            <div class="info-box">
+                <span class="info-box-icon "><i class="fa fa-users" style="color: rgba(18,216,121,1.0)"></i></span>
+                <div class="info-box-content">
+                  <span class="info-box-text">Unique Visitors</span>
+                  <span class="info-box-number">41,410</span>
+                  <div class="progress">
+                    <div class="progress-bar" style="width: 70%;background-color: rgba(18,216,121,1.0)"></div>
+                  </div>
+                  <span class="progress-description">
+                    70% Increase in 30 Days
+                  </span>
+                </div>
+              </div>
+        </div>
+  
+        <div class="col-md-3 col-sm-6 col-12">
+            <div class="info-box">
+                <span class="info-box-icon"><i class="far fa-envelope" style="color: rgba(18,216,121,1.0)"></i></span>
+                <div class="info-box-content">
+                  <span class="info-box-text">Product Complaints</span>
+                  <span class="info-box-number">1,410</span>
+                  <div class="progress">
+                    <div class="progress-bar" style="width: 10%;background-color: rgba(18,216,121,1.0)"></div>
+                  </div>
+                  <span class="progress-description">
+                    10% Increase in 30 Days
+                  </span>
+                </div>
+            </div>
+        </div>
+  
+        <div class="col-md-3 col-sm-6 col-12">
+          <div class="info-box">
+              <span class="info-box-icon"><i class="far fa-thumbs-up" style="color: rgba(18,216,121,1.0)"></i></span>
+              <div class="info-box-content">
+                <span class="info-box-text">Likes</span>
+                <span class="info-box-number">41,410</span>
+                <div class="progress">
+                  <div class="progress-bar" style="width: 70%;background-color: rgba(18,216,121,1.0)"></div>
+                </div>
+                <span class="progress-description">
+                  70% Increase in 30 Days
+                </span>
+              </div>
+            </div>
+        </div>
+
+        <!-- Graphs -->
+        <div class="row" id="row-div">
+          <div class="col-md-6 col-6 col-sm-12">
+          <canvas id="myChart"> 
+          </canvas>
+          <script>
+          const xValues = [50,60,70,80,90,100,110,120,130,140,150];
+          const yValues = [7,8,8,9,9,9,10,11,14,14,15];
+          
+          new Chart("myChart", {
+            type: "line",
+            data: {
+              labels: xValues,
+              datasets: [{
+                fill: false,
+                lineTension: 0,
+                backgroundColor: "rgba(0,0,255,1.0)",
+                borderColor: "rgba(18,216,121,1.0)",
+                data: yValues
+              }]
+            },
+            options: {
+              title: {
+              color: 'black',
+              fontSize:24,
+              display: true,
+              text: "Sales Statistics"
+              }
+            },
+              scales: {
+                yAxes: [{ticks: {min: 6, max:16}}],
+              }
+            }
+          );
+          </script>
+          </div>
+          
+          <div class="col-md-6 col-6 col-sm-12">
+          <canvas id="productionChart"></canvas>
+          <script>
+          var contries = ["Italy", "France", "Spain", "USA", "Argentina"];
+          var production = [55, 49, 44, 24, 15];
+          var barColors = ["rgba(18,216,121,0.7)", "rgba(18,216,121,0.7)","rgba(18,216,121,0.7)","rgba(18,216,121,0.7)","brown"];
+  
+          new Chart("productionChart", {
+            type: "bar",
+            data: {
+              labels: contries,
+              datasets: [{
+                backgroundColor: barColors,
+                data: production
+              }]
+            },
+            options: {
+              legend: {display: false},
+              title: {
+                color: 'black',
+                fontSize:24,
+                display: true,
+                text: "World Wide Production"
+              }
+            }
+          });
+          </script>
+          </div>
+        </div>
+        
+        <!-- User chart and Infos -->
+        <div class="row" id="row-div">
+          <div class="col-lg-4 col-6  col-sm-6">
+          <canvas id="userChart"></canvas>
+  
+          <script>
+          var userTypes = ["New Orders", "Deliverd Orders", "Replace Orders"];
+          var users = [55, 49, 44];
+          var barColors = [
+            "#b91d47",
+            "#00aba9",
+            "#2b5797",
+            "#e8c3b9",
+            "#1e7145"
+          ];
+  
+          new Chart("userChart", {
+            type: "doughnut",
+            data: {
+              labels: userTypes,
+              datasets: [{
+                backgroundColor: barColors,
+                data: users
+              }]
+            },
+            options: {
+              title: {
+                color: 'black',
+                fontSize:24,
+                display: true,
+                text: "Current Orders' States"
+              }
+            }
+          });
+          </script>
+  
+          </div>
+  
+          <div class="col-lg-4 col-6 col-sm-6">
+            <div class="small-box">
+              <div class="inner">
+                <h4>New Orders
+                  <sup style="font-size: 20px"><i class="fa fa-circle" style="color: rgba(18,216,121,1.0);"></i><sup>1089</sup></sup>
+                </h4>
+                <p>Bonus Rate</p>
+              </div>
+              <div class="icon">
+                <i class="ion ion-stats-bars">
+                </i>
+              </div>
+              <a href="#" class="small-box-footer">
+                More info
+                <i class="fas fa-arrow-circle-right"></i>
+              </a>
+            </div>
+  
+            <div class="small-box">
+              <div class="inner">
+                <h4>Complaints
+                  <sup style="font-size: 20px"><i class="fa fa-circle" style="color: rgba(18,216,121,1.0)"></i><sup>9</sup></sup>
+                </h4>
+                <p>Bonus Rate</p>
+              </div>
+              <div class="icon">
+                <i class="ion ion-stats-bars">
+                </i>
+              </div>
+              <a href="#" class="small-box-footer">
+                More info
+                <i class="fas fa-arrow-circle-right"></i>
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-4 col-6 col-sm-6">
+            <div class="small-box">
+              <div class="inner">
+                <h4>New Orders
+                  <sup style="font-size: 20px"><i class="fa fa-circle" style="color: rgba(18,216,121,1.0)"></i><sup>1089</sup></sup>
+                </h4>
+                <p>Bonus Rate</p>
+              </div>
+              <div class="icon">
+                <i class="ion ion-stats-bars">
+                </i>
+              </div>
+              <a href="#" class="small-box-footer">
+                More info
+                <i class="fas fa-arrow-circle-right"></i>
+              </a>
+            </div>
+  
+            <div class="small-box">
+              <div class="inner">
+                <h4>Complaints
+                  <sup style="font-size: 20px"><i class="fa fa-circle" style="color: rgba(18,216,121,1.0);"></i><sup>9</sup></sup>
+                </h4>
+                <p>Bonus Rate</p>
+              </div>
+              <div class="icon">
+                <i class="ion ion-stats-bars">
+                </i>
+              </div>
+              <a href="#" class="small-box-footer">
+                More info
+                <i class="fas fa-arrow-circle-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+     </div>
+    </div>
+    </section>
+</body>
+</html>
+
+
+
+
+
+
+
+ 
+
