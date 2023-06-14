@@ -1,0 +1,203 @@
+body{
+    margin: 0;
+    background-color: rgba(205, 209, 209, 0.8) ;
+}
+
+/* info box styling */
+.info-box {
+    box-shadow: 0 2px 1px rgba(0,0,0,.125), 0 1px 3px rgba(0,0,0,.2);
+    border-radius: 0.25rem;
+    background-color: #ffffff;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 1rem;
+    min-height: 80px;
+    padding: 0.5rem;
+    position: relative;
+    width: 100%;
+}
+.info-box .info-box-icon {
+    background-color: rgba(55,50,43,0.4);
+    border-radius: 0.25rem;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 1.875rem;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    text-align: center;
+    width: 70px;
+}
+.info-box .info-box-icon i{
+    color: black;
+}
+.info-box .info-box-content {
+    overflow-wrap: normal;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    line-height: 1.8;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    padding: 0 10px;
+}
+.info-box .info-box-text, .info-box .progress-description {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.info-box .info-box-number {
+    display: block;
+    margin-top: 0.25rem;
+    font-weight: 700;
+}
+.info-box .progress {
+    background-color: rgba(0,0,0,.125);
+    height: 5px;
+    margin: 5px 0;
+}
+
+.progress {
+    box-shadow: none;
+    border-radius: 1px;
+}
+.progress {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    /* display: flex; */
+    /* height: 1rem; */
+    /* overflow: hidden; */
+    /* line-height: 0; */
+    /* font-size: .75rem; */
+    /* background-color: #e9ecef; */
+    /* border-radius: 0.25rem; */
+    /* box-shadow: inset 0 0.1rem 0.1rem rgba(0,0,0,.1); */
+}
+.bg-info, .bg-info>a {
+    color: #fff!important;
+}
+.info-box .progress .progress-bar {
+    background-color: #fff;
+}
+.info-box .progress-description {
+    margin: 0;
+}
+.info-box .info-box-text, .info-box .progress-description {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: wrap;
+}
+
+.bg-info, .bg-info>a {
+    color: #fff!important;
+}
+.fa-bookmark:before {
+    content: "\f02e";
+}
+
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+.fa, .far, .fas {
+    font-family: "Font Awesome 5 Free";
+} 
+ .fab, .far {
+    font-weight: 400;
+}
+#main{
+    margin-left: 90px;
+    transition: margin-left 0.4s;
+}
+
+/* Small Box info */
+#row-info{
+    /* background-color: black;*/
+    width:100%; 
+    transition: 0.4s;
+    /* margin-left: 4.5%; */
+    height: auto; 
+    /* float: right;  */
+    margin-top: 20px;
+}
+
+#row-div{
+    background-color: #fff;
+    border-radius: 5px;
+    width: 100%; 
+    transition: 0.4s;
+    /* margin-left: 5.5%; */
+    height: auto; 
+    /* float: right;  */
+    right: 0;
+    margin-top: 20px;
+    box-shadow: 1px 1px 5px 1px rgba(0,0,123,0.6);
+}
+
+.small-box {
+    background-color: #e0e0e0f8;
+    border: 1px solid grey ;
+    border-radius: 4px;
+    box-shadow: 1px 1px 1px 4px rgba();
+    display: block;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    position: relative;
+}
+.small-boxs a{
+    color:rgba(18,216,121,1.0);
+}
+.small-box>.inner {
+    background-color: white;
+    padding: 10px;
+    /* color: rgba(18,216,121,1.0); */
+    
+}
+
+.small-box h4 {
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin: 0 0 10px;
+    padding: 0;
+    white-space: wrap;
+}
+sup {
+    top: -0.5em;
+}
+.small-box .icon {
+    color: rgba(0,0,0,.15);
+    z-index: 0;
+}
+.small-box .icon>i {
+    font-size: 90px;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    transition: -webkit-transform .3s linear;
+    transition: transform .3s linear;
+    transition: transform .3s linear,-webkit-transform .3s linear;
+}
+.small-box>.small-box-footer {
+    background-color: rgba(18,216,121,1.0);
+    color: rgba(255,255,255,1.0);
+    display: block;
+    padding: 3px 0;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    z-index: 10;
+}
