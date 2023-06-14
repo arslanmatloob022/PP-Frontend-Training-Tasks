@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js</title>
+        
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <style>
+        input[type="color"] {
+        width: 5%;
+        height: 30px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+    </style>
+</head>
+
+<body id="body">
+    <!-- background color Selector -->
+    <div>
+    <h2>The backgroundColor problem</h2>
+    <h3>Custom color selector</h3>
+    <input type="color" id="color-selector"> 
+    </div>
+
+    <!-- Location and IP -->
+    <div>
+    <h2>The geolocation problem</h2>
+    <br>
+    <button onclick="getLocation()">Location</button>
+    <h4 id="loc"></h4>
+    <h3>Ip Address Problem</h3>
+    <h5 id="ip"></h5>
+    </div>
+
+    <!-- Autopcomplete -->
+    <div class="ui-widget">
+        <label for="tags">Tags: </label>
+        <input id="tags">
+    </div>
+    <br>
+    <br>
+    
+
+    <script>
+        //custom color changer
+        const colorSelector = document.getElementById('color-selector');
+
+        colorSelector.addEventListener('input', () => {
+            const color = colorSelector.value;
+            document.body.style.backgroundColor = color;
+        });
+
+
+        // prompt color changer
+
+        // const button = document.getElementById('change-background');
+        // const body = document.getElementById('body');
+
+        // button.addEventListener('click', () => {
+        //     const color = prompt('Enter your Bg  color:');
+        //     body.style.backgroundColor = color;
+        // });
+
+        //location
+        var x = document.getElementById("loc");
+        function getLocation() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(showPosition);
+        } else { 
+            x.innerHTML = "Geolocation is not supported by this browser.";
+        }
+        }
+
+
+        function showPosition(position) {
+            x.innerHTML = "Latitude Value: " + position.coords.latitude + 
+        "<br>Longitude Value: " + position.coords.longitude;
+        }
+        
+        // Ip Address
+        fetch('https://api.ipify.org?format=json')
+        .then(response => response.json())
+        .then(data => {
+          document.getElementById('ip').textContent = data.ip;
+        });
+
+        // Auto complete
+        $( function() {
+    var availableTags = [
+      "ActionScript",
+      "AppleScript",
+      "Asp",
+      "BASIC",
+      "C",
+      "C++",
+      "Clojure",
+      "COBOL",
+      "ColdFusion",
+      "Erlang",
+      "Fortran",
+      "Groovy",
+      "Haskell",
+      "Java",
+      "JavaScript",
+      "Lisp",
+      "Perl",
+      "PHP",
+      "Python",
+      "Ruby",
+      "Scala",
+      "Scheme"
+    ];
+    $( "#tags" ).autocomplete({
+      source: availableTags
+    });
+  } );
+    </script>
+
+</body>
+</html>

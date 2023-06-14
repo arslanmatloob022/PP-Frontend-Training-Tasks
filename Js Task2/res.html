@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        const formDataJson = JSON.stringify(Object.fromEntries(formData.entries()));
+        formData = JSON.parse(formDataJson);
+        const jsonData = JSON.stringify(formData, null, 2);
+        formDataJson = localStorage.getItem('formData');
+        
+        document.write(formData);
+        // let jsObj = JSON.parse(yourJsonString);
+        formData = JSON.parse(formDataJson);
+        let html = '';
+        for (let i = 0; i < formData.length; i++) {
+        html += '<div>';
+        html += '<h2>' + formData[i].title + '</h2>';
+        html += '<p>' + formData[i].description + '</p>';
+        html += '</div>';
+        }
+        document.getElementById('output').innerHTML = html;
+
+        document.write(formData);
+
+        // formData = JSON.parse(formDataJson);
+        // document.write(formData);
+    </script>
+    <div id="output">
+        <p>
+            paskisataygdysabdsbj
+        </p>
+    </div>
+    
+</body>
+</html>
