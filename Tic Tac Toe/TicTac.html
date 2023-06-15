@@ -9,6 +9,7 @@
 
 <body>
   <div class="container">
+	<h1 class="ttt">Tic Tac Toe</h1>
 	  <table>
 	    <tr>
 	      <td id="1"></td>
@@ -26,10 +27,17 @@
 	      <td id="9"></td>
 	    </tr>
 	  </table>
-	  <div class="result">
-		<img src="images/IMG_1136.CR2.jpg" alt="">
+	  <div class="playerOne">
+		<img src="images/player1.jpg" alt="">
+		<h3 class="name">Player One Wins!</h3>
+		<button onclick="reset()">Restart</button>
 	  </div>
-	  <button onclick="reset()" id="reset">Restrat</button>
+	  <div class="playerTwo">
+		<img src="images/player2.jpg" alt="">
+		<h3 class="name">Player Two Wins!</h3>
+		<button onclick="reset()">Restart</button>
+	  </div>
+	  <button id="reset" onclick="reset()">Restrat</button>
 	</div>
     <script src="tictactoe.js"></script>
 </body>

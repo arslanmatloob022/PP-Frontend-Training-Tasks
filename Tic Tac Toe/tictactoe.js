@@ -29,6 +29,9 @@ for (let i = 1; i <= 9; i++) {
   );
 }
 
+res = document.querySelector(".playerOne");
+res2 = document.querySelector(".playerTwo");
+
 function checkWin() {
   for (let i = 0; i < winPos.length; i++) {
 	if (
@@ -42,12 +45,10 @@ function checkWin() {
     
 	  gameEnded = true;
 	  setTimeout(function() {
-      res = document.querySelector(".result");
       if(playerSymbol =="O"){
-        alert("Player-1 Wins !");
-        document.classList.add('.show');
+        res.classList.add('show');
       }else{
-        alert("Player-2 Wins");
+        res2.classList.add('show');
       }
 	   
 	  }, 500);
@@ -62,5 +63,7 @@ function checkWin() {
       document.getElementById(i.toString()).classList.remove("o");
       document.getElementById(i.toString()).classList.remove("win");
       gameEnded = false;
+      res.classList.remove("show");
+      res2.classList.remove("show");
     }
   }

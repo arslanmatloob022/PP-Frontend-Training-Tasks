@@ -5,12 +5,12 @@ body{
   background-attachment:fixed ;
 }
 table {
+  box-shadow: 1px 1px 20px white;
   border-collapse: collapse;
   border: 8px solid brown;
-  margin: 60px auto;
-
   border-style: groove;
-  border-radius: 15px;
+  /* border-radius: 15px; */
+  position: relative;
 }
 
 td {
@@ -41,11 +41,15 @@ td {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  /* background-color: aqua; */
-  position: relative;
   z-index: 0;
 }
-
+.ttt{
+  color: brown;
+  text-shadow: 2px 2px 4px white;
+  font-weight: 900;
+  font-size: 44px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 #reset {
   border: 2px groove black;
   background-color: black;
@@ -55,13 +59,33 @@ td {
   padding: 16px 30px;
   cursor: pointer;
 }
-.result{
+.playerOne, .playerTwo{
   display:none;
 }
-.result.show{
-  background-color: beige;
+.playerOne.show, .playerTwo.show{
+  background-color: rgb(83, 81, 81);
+  border: 1px ridge bisque;
+  border-radius: 10px;
   position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 160px;
   height: 180px;
   z-index: 1000;
+  padding: 10px;
+}
+.playerOne img, .playerTwo img{
+  margin-top: 10%;
+  border-radius: 20px;
+  width: 80px;
+  height: 80px;
+  border: 2px ridge bisque;
+}
+.playerOne button, .playerTwo button{
+  border-radius: 5px;
+  padding: 4px 5px;
+  background-color: rgb(231, 231, 231);
+  color: rgb(0, 0, 0);
+  cursor: pointer;
 }
