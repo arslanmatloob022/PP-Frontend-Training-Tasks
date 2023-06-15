@@ -53,24 +53,24 @@
     display: none;
     z-index: 1000;
 }
-ul{
+.lists{
     list-style: none;
     padding: 0 15px;
     z-index: 1000;
 }
-ul li{
+.lists li{
     margin: 50px 0;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
 }
-ul li i{
+.lists li i{
     color: rgb(255, 255, 255);
     width: 30px;
     margin-right: 0px;
 }
-ul li p{
+.lists li p{
     white-space: nowrap;
     display: none;
     color: white;
@@ -98,7 +98,7 @@ ul li p{
     display: block;
 }
 .side-nav:hover ul li i{
-    color: rgba(18,216,121,1.0);
+    color: rgb(234, 235, 234);
     margin-right: 10px;
 }
 .side-nav:hover ul li{
