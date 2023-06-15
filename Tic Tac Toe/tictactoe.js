@@ -51,10 +51,8 @@ function checkWin() {
       }
 	   
 	  }, 500);
-    // reset();
 	}
   }
-  // 
 }
 
   function reset() {
