@@ -1,6 +1,9 @@
 table {
   border-collapse: collapse;
+  border: 8px solid black;
   margin: 0 auto;
+  border-style: groove;
+  border-radius: 15px;
 }
 
 td {
@@ -8,27 +11,50 @@ td {
   height: 100px;
   text-align: center;
   vertical-align: middle;
-  border: 1px solid black;
+  border-radius: 15px;
+  border: 5px solid rgb(29, 29, 29);
 }
-.x {
-    color: blue;
-    font-size: 80px;
+
+.p1 {
+  color: rgb(36, 36, 194);
+  font-size: 80px;
 }
-  
-.o {
-color: red;
-font-size: 80px;
+
+.p2 {
+  color: rgb(223, 40, 177);
+  font-size: 80px;
 }
 
 .win {
-background-color: yellow;
+  background-color: rgb(28, 209, 43);
 }
+
 .container {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: aqua;
+  position: relative;
+  z-index: 0;
 }
 
 #reset {
-    margin: 48px 40%;
-    padding: 20px;
+  border: 2px groove black;
+  background-color: black;
+  color: aliceblue;
+  border-radius: 10px;
+  margin: 48px 40%;
+  padding: 10px 12px;
+  cursor: pointer;
+}
+.result{
+  display:none;
+}
+.result.show{
+  background-color: beige;
+  position: absolute;
+  width: 160px;
+  height: 180px;
+  z-index: 1000;
 }
