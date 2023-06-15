@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>    
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Class Task</title>
+        <link rel="stylesheet" href="bootstrap.css.map">
+        <link rel="stylesheet" href="bootstrap.css">
+        <link rel="stylesheet" href="MyStyle.css">
+        <link rel="stylesheet" href="custom.css">
+        <link rel="stylesheet" href="fontawesome-free-5.15.4-web/css/all.min.css">
+
+    </head>
+    <body>
+        <div class="navbar">
+            <a href="#default" class="logo">CompanyLogo</a>
+            <div class="search-container">
+                <form action="/action_page.php">
+                  <input type="text" placeholder="Search.." name="search">
+                  <button type="submit"><i class="fa fa-search"></i></button>
+                </form>
+              </div>
+        </div>
+        <!-- Tab switching function -->
+        <script>
+            let numSwitches = 0;
+            document.addEventListener("visibilitychange", () => {
+              if (document.visibilityState === "hidden") {
+                numSwitches++;
+                console.log(`User switched away from the page ${numSwitches} times.`);
+                document.getElementById("outPut").innerHTML =`User switched the page ${numSwitches} times.`;
+                }
+            });
+          </script>
+          
+          
+        <!--Sidebar Menu--> 
+        <div class="Sidebar">
+            <div class="side-nav">
+                <div class="user">
+                    <img src="icons/logo.jpg" class="user-img">
+                    <div>
+                    <h2>Arslan Matloob</h2>
+                    <p>@raoarslanmatloob</p>
+                    </div>
+                    <img src="icons/settings.png" class="star-img">
+                </div>
+                <ul>
+<li><img src="icons/dash.png"><p>Dashboard</p></li>
+                    <li><img src="icons/dash.png"><p>Dashboard</p></li>
+                    <li><img src="icons/Lists.png"><p>Courses</p></li>
+                    <li><img src="icons/attempt.png" ><p>Attempt</p></li>
+                    <li><img src="icons/iq.png" ><p>Test IQ</p></li>
+                    <li><img src="icons/faqs.png"><p>FAQs</p></li> 
+                </ul>
+                <ul>
+                    <li><img src="icons/goal.png" alt=""><p>Logout</p></li> 
+                </ul>
+        </div>
+
+        <div class="containerbox"> 
+            <div class="column">
+                <h3><label>Solve the followings</label></h3>
+                <h4>Write some content<br></h4>
+                <h4>Write some content<br></h4>
+                <h4>Write some content<br></h4>
+                <h4>Write some content<br></h4>
+            </div>
+
+            <div class="column">
+                <h3><label>Hints will help in solutions</label></h3>
+                <h4>Write some content<br></h4>
+                <h4>Write some content<br></h4>
+                <h4>Write some content<br></h4>
+                <h4>Write some content<br></h4>
+            </div>
+
+            <div class="column">
+                <form action="/datapage.php">
+                    <h3><label for="TextArea">Enter Your Answer Here.:</label></h3>
+                    <textarea class="row" id="textArea" rows="8"></textarea>
+                    <input class="row textButton" id="stop" type="submit" value="Submit">
+                </form>
+            </div>
+        </div>
+
+        <video id="video" width="160px" height="140px"></video>
+        <button id="start">Start Quiz</button>
+
+        <script>
+          const video = document.getElementById('video');
+          const startButton = document.getElementById('start');
+          const stopButton = document.getElementById('stop');
+          let mediaRecorder;
+          let recordedChunks = [];
+    
+          navigator.mediaDevices.getUserMedia({ video: true, audio:true})
+            .then(stream => {
+              video.srcObject = stream;
+              mediaRecorder = new MediaRecorder(stream);
+              mediaRecorder.ondataavailable = handleDataAvailable;
+            });
+    
+          startButton.addEventListener('click', () => {
+            recordedChunks = [];
+            mediaRecorder.start();
+          });
+    
+          stopButton.addEventListener('click', () => {
+            mediaRecorder.stop();
+          });
+    
+          function handleDataAvailable(event) {
+            if (event.data.size > 0) {
+              recordedChunks.push(event.data);
+              saveVideo();
+            }
+          }
+
+          function saveVideo() {
+          const blob = new Blob(recordedChunks, { type: 'video/webm' });
+          const url = URL.createObjectURL(blob);
+          const vid = document.createElement('a');
+          document.body.appendChild(vid);
+          vid.style = 'display: none';
+          vid.href = url;
+          vid.download = 'Recording.webm';
+          vid.click();
+          window.URL.revokeObjectURL(url);
+          }
+
+          // window.addEventListener('beforeunload', () => {
+          //   saveVideo();
+          // });
+          
+        </script> 
+        
+        <div class="outputdiv"; style="float: right;">
+        <h4 id="outPut" style="color: white;"></h4>
+        </div>
+    </body>
+</html>
