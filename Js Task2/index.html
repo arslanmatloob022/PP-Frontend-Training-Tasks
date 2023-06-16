@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- Home -->
+    <section class="home">
+        <div class="">
+          <!-- Forget Password -->
+          <div class="form">
+            <form action="res.html" method="get">
+              <h2>Student Registration</h2>
+              <div class="input_box">
+                <i class="uil uil-user user"></i>
+                <input type="text" name="name" placeholder="Enter Full Name" required />
+              </div>
+
+              <div class="input_box">
+                  <input type="email" name="email" placeholder="Enter Your Email" pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$" required />
+                  <i class="uil uil-envelope-alt email"></i>
+              </div>
+              
+              <div class="input_box">
+                <i class="uil uil-user user"></i>
+                <input name="Username" type="text" placeholder="Enter Username" pattern="^[a-zA-Z0-9]+([a-zA-Z0-9](_|-| )[a-zA-Z0-9])*[a-zA-Z0-9]+$" required />
+              </div>
+  
+              <div class="input_box">
+                <i class="uil uil-phone phone"></i>
+                <input type="text" placeholder="Enter Phone" required />
+                
+              </div>
+
+              <div class="input_box">
+                <div class="degree">
+                    <label for="degree">Degree</label>
+                    <select  id="degree" name="degree">
+                    <option value="bsc">BSc</option>
+                    <option value="msc">MSc</option>
+                    <option value="phd">PhD</option>
+                    </select>
+                </div>
+
+                <div class="duration">
+                    <label class="duation" for="duration">Dur :</label>
+                    <select  id="duration" name="duration"></select>
+                </div>
+                
+                <div class="association">
+                    <label  for="association"> Asc : </label>
+                    <select  id="association" name="association"></select>
+                </div>
+              </div>
+  
+              <div class="input_box">
+                <i class="uil uil-lock password"></i>
+                <input type="password" placeholder="Enter Password" required />
+                <i class="uil-eye-slash pw_hide"></i>
+              </div>
+  
+              <button type="submit" class="button">Submit</button>
+            </form>
+          </div>
+        </div>
+      </section>
+      <script src="form.js"></script>
+</body>
+</html>
