@@ -5,87 +5,73 @@
     const associationSelect = document.getElementById('association');
     durDropDown = document.querySelector(".duration");
     ascDropDown = document.querySelector(".association");
-    function options(value, text){
+
+    // var arr = [
+    //     ['mcs','bcs','bse','bes'],
+    //     ['MCS','BCS','BSE','BES'],
+    //     ['2','3','4','5'],
+    //     ['2 years','3 years','4 years','5 years'],
+    //     ['mphil','master','philoshpy','doctorate'],
+    //     ['Mphil','Master','Philoshpy','Doctorate'],
+    // ]
+
+    // for(let i=0; 1 < arr.length; i++){
+    //     if([i].value === 'bcs'){
+    //         console.log("found");
+    //        }
+    //     for(let j=0; j<arr.length-1; j++){
+           
+    //     }
+    // }
+
+    function duroptions(value, text){
         const option = document.createElement('option');
-        option.value = '4';
-        option.text = '4 years';
-        durationSelect.add(option2)
+        option.value = value;
+        option.text = text;
+        durationSelect.add(option)
+    }
+    function ascoptions(value, text){
+        const option = document.createElement('option');
+        option.value = value;
+        option.text = text;
+        associationSelect.add(option)
     }
 
     degreeSelect.addEventListener('change', () => {
         durationSelect.innerHTML = '';
-        if (degreeSelect.value === 'bsc') {
         durDropDown.classList.add("active");
-;
+        if (degreeSelect.value === 'bsc') {
+            ascoptions('2','2 Years');
+            ascoptions('4','4 Years');
+
         } else if (degreeSelect.value === 'msc') {
-            durDropDown.classList.add("active");
-        const option1 = document.createElement('option');
-        option1.value = '2';
-        option1.text = '2 years';
-        durationSelect.add(option1);
-
-        const option2 = document.createElement('option');
-        option2.value = '3';
-        option2.text = '3 years';
-        durationSelect.add(option2);
+            ascoptions('3','3 Years');
+            ascoptions('5','5 Years');
         } else if (degreeSelect.value === 'phd') {
-            durDropDown.classList.add("active");
-        const option1 = document.createElement('option');
-        option1.value = '3';
-        option1.text = '3 years';
-        durationSelect.add(option1);
-
-        const option2 = document.createElement('option');
-        option2.value = '5';
-        option2.text = '5 years';
-        durationSelect.add(option2);
+            ascoptions('4','4 Years');
+            ascoptionsh('6','6 Years');
         };
-
-        
     });
 
     durationSelect.addEventListener('change', () => {
-        associationSelect.innerHTML ='';
-
+        associationSelect.innerHTML ='2';
+        ascDropDown.classList.add("active");
         if (durationSelect.value === '2') {
-        ascDropDown.classList.add("active");
-        const option1 = document.createElement('option');
-        option1.value = 'm-phil';
-        option1.text = 'M Phill';
-        associationSelect.add(option1);
-
-        const option2 = document.createElement('option');
-        option2.value = 'master';
-        option2.text = 'Master';
-        associationSelect.add(option2);
-        const option3 = document.createElement('option');
-        option2.value = 'master';
-        option2.text = 'Master';
-        associationSelect.add(option3);
-        } else if (durationSelect.value === '3') {
-        ascDropDown.classList.add("active");
-        const option1 = document.createElement('option');
-        option1.value = 'doctorate';
-        option1.text = 'Doctorate';
-        associationSelect.add(option1);
-
-        const option2 = document.createElement('option');
-        option2.value = 'professor';
-        option2.text = 'professor';
-        associationSelect.add(option2);
+            duroptions('m-phil','M Phill');
+            duroptions('master','Matser');
         } else if (durationSelect.value === '4') {
-        ascDropDown.classList.add("active");
         const option1 = document.createElement('option');
-        option1.value = 'doctorate';
-        option1.text = 'Doate';
-        durationSelect.add(option1);
-
-        const option2 = document.createElement('option');
-        option2.value = 'professor';
-        option2.text = 'prsor';
-        associationSelect.add(option2);
-        } 
+        duroptions('phd','PHD');
+        duroptions('philosphy','Philosphy');
+        } else if (durationSelect.value === '5') {
+        duroptions('phd','5th ');
+        duroptions('philosphy','6Th');
+        }else if (durationSelect.value === '6') {
+        duroptions('phd','7th ');
+        duroptions('philosphy','8Th');
+        }
     });
+
 
 
     //Password show/hide
