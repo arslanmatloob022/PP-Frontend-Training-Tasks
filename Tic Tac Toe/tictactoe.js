@@ -33,6 +33,7 @@ res = document.querySelector(".playerOne");
 res2 = document.querySelector(".playerTwo");
 
 function checkWin() {
+  var winnings = 0;
   for (let i = 0; i < winPos.length; i++) {
 	if (
 	  document.getElementById(winPos[i][0]).innerHTML === playerSymbol &&
