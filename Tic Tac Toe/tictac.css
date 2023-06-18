@@ -35,7 +35,11 @@ td {
 .win {
   background-color: rgb(107, 67, 8);
 }
-
+.container-fluid{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
 .container {
   display: flex;
   justify-content: center;
@@ -43,6 +47,7 @@ td {
   flex-direction: column;
   z-index: 0;
 }
+
 .ttt{
   color: brown;
   text-shadow: 2px 2px 4px white;
@@ -88,4 +93,22 @@ td {
   background-color: rgb(231, 231, 231);
   color: rgb(0, 0, 0);
   cursor: pointer;
+}
+
+.Firstplayer, .Secondplayer{
+  align-items: center;
+  background-color: rgb(83, 81, 81);
+  border: 1px ridge bisque;
+  border-radius: 10px;
+  width: 160px;
+  height: 180px;
+  z-index: 1000;
+  padding: 10px;
+}
+.Firstplayer img, .Secondplayer img{
+  margin-top: 10%;
+  border-radius: 20px;
+  width: 80px;
+  height: 80px;
+  border: 2px ridge bisque;
 }
