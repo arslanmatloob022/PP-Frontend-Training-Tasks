@@ -1,4 +1,4 @@
-# dotshop
+# mydotshop
 
 ## Project setup
 ```
