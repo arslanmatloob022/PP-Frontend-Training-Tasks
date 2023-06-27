@@ -63,7 +63,7 @@ export default {
   z-index: 101;
   background: #0f0a0a;
   padding: 25px;
-  border-radius: 12px;
+  border-radius: 28px 0px;
   border: 2px solid black;
   box-sizing: border-box;
   box-shadow: rgba(0, 0, 0, 0.1);
@@ -81,7 +81,7 @@ export default {
   cursor: pointer;
 }
 .form_close:hover {
-  border-radius: 4px 4px 4px 4px;
+  border-radius: 5px 0px;
   background-color: rgba(18, 216, 121, 1);
   color: white;
   opacity: 1;
@@ -158,7 +158,7 @@ export default {
   white-space: nowrap;
 }
 .checkbox input {
-  accent-color: rgba(36, 65, 185, 1);
+  accent-color: rgba(18, 216, 121, 1);
 }
 .checkbox label {
   font-size: 12px;
@@ -172,7 +172,7 @@ export default {
   margin-top: 30px;
   width: 100%;
   padding: 7px 0;
-  border-radius: 0 10px;
+  border-radius: 10px 0px;
   color: rgba(18, 216, 121, 1);
   font-size: 16px;
 }
@@ -182,5 +182,9 @@ export default {
   text-align: center;
   margin-top: 15px;
   color: rgba(18, 216, 121, 1);
+}
+
+.signup_form {
+  display: none;
 }
 </style>
