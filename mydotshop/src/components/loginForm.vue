@@ -3,44 +3,67 @@
     rel="stylesheet"
     href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
   />
-  <section class="Forms">
-    <!-- Login Form -->
-    <div class="form_container">
-      <i class="uil uil-times form_close"></i>
-      <div class="form login_form">
-        <form action="dashboard.html">
-          <h2>Login</h2>
+  <div class="form_container">
+    <i class="uil uil-times form_close"></i>
+    <!-- Login From -->
+    <div v-if="activeForm === 'login_form'" class="form login_form">
+      <form v-if="activeForm === 'login_form'" action="#">
+        <h2>Login</h2>
+        <div class="input_box">
+          <input type="email" placeholder="Enter your email" required />
+          <i class="uil uil-envelope-alt email"></i>
+        </div>
+        <div class="input_box">
+          <input type="password" placeholder="Enter your password" required />
+          <i class="uil uil-lock password"></i>
+          <i class="uil uil-eye-slash pw_hide"></i>
+        </div>
+        <div class="option_field">
+          <span class="checkbox">
+            <input type="checkbox" id="check" />
+            <label for="check">Remember me</label>
+          </span>
+          <a href="#" id="forgetpswrd" class="forgot_pw">Forgot password?</a>
+        </div>
 
-          <div class="input_box">
-            <input type="email" placeholder="Enter your email" required />
-            <i class="uil uil-envelope-alt email"></i>
-          </div>
-          <div class="input_box">
-            <input type="password" placeholder="Enter your password" required />
-            <i class="uil uil-lock password"></i>
-            <i class="uil uil-eye-slash pw_hide"></i>
-          </div>
-          <div class="option_field">
-            <span class="checkbox">
-              <input type="checkbox" id="check" />
-              <label for="check">Remember me</label>
-            </span>
-            <a href="#" id="forgetpswrd" class="forgot_pw">Forgot password?</a>
-          </div>
-
-          <button
-            class="button"
-            onclick="window.location.href='dashboard.html'"
-          >
-            Login
-          </button>
-          <div class="login_signup">
-            Don't have an account? <a href="#" id="signup">Signup</a>
-          </div>
-        </form>
-      </div>
+        <button class="button">Login</button>
+        <div class="login_signup">
+          Don't have an account?
+          <a @click="activeForm = 'signup_form'" href="#" id="signup">Signup</a>
+        </div>
+      </form>
     </div>
-  </section>
+
+    <div v-if="activeForm === 'signup_form'" class="form signup_form">
+      <form v-if="activeForm === 'signup_form'" action="#">
+        <h2>Signup</h2>
+        <div class="input_box">
+          <input type="email" placeholder="Enter your email" required />
+          <i class="uil uil-envelope-alt email"></i>
+        </div>
+        <div class="input_box">
+          <input type="password" placeholder="Enter your password" required />
+          <i class="uil uil-lock password"></i>
+          <i class="uil uil-eye-slash pw_hide"></i>
+        </div>
+        <div class="option_field">
+          <span class="checkbox">
+            <input type="checkbox" id="check" />
+            <label for="check">Remember me</label>
+          </span>
+          <a href="#" id="forgetpswrd" class="forgot_pw">Forgot password?</a>
+        </div>
+
+        <button class="button">Login</button>
+        <div class="login_signup">
+          Don't have an account?
+          <a @click="activeForm === 'signup_form'" href="#" id="signup"
+            >Signup</a
+          >
+        </div>
+      </form>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -48,6 +71,11 @@ export default {
   name: "LoginForm",
   closeLoginForm() {
     this.$emit("close");
+  },
+  data() {
+    return {
+      activeForm: "login_form",
+    };
   },
 };
 </script>
@@ -108,7 +136,7 @@ export default {
   outline: none;
   padding: 0 30px;
   background-color: #0f0a0a;
-  color: rgb(22, 22, 22);
+  color: rgb(236, 228, 228);
   transition: all 0.2s ease;
   border-bottom: 1.5px solid #aaaaaa;
 }

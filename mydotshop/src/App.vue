@@ -1,4 +1,8 @@
 <template>
+  <link
+    rel="stylesheet"
+    href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+  />
   <header id="header" class="header">
     <nav class="nav">
       <div class="logo-div">
@@ -7,11 +11,21 @@
 
       <ul class="nav_items">
         <li class="nav_item">
-          <a href="#" class="nav_link">Home</a>
-          <!-- <a href="#" class="nav_link">Dashboard</a>
-          <a href="#" class="nav_link">Configuration</a>
-          <a href="#" class="nav_link">Members</a> -->
-          <a href="#" class="nav_link">Contact</a>
+          <a href="#" class="nav_link"
+            ><span><i class="uil uil-home"></i></span>Home</a
+          >
+          <a href="#" class="nav_link"
+            ><span><i class="uil uil-create-dashboard"></i></span>Dashboard</a
+          >
+          <a href="#" class="nav_link"
+            ><span><i class="uil uil-setting"></i></span> Configuration</a
+          >
+          <a href="#" class="nav_link"
+            ><span><i class="uil uil-users-alt"></i></span> Members</a
+          >
+          <a href="#" class="nav_link"
+            ><span><i class="uil uil-fast-mail-alt"></i></span> Contact</a
+          >
         </li>
       </ul>
 
