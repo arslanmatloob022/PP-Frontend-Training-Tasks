@@ -1,67 +1,49 @@
 <template>
-  <link
-    rel="stylesheet"
-    href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
-  />
-  <div class="form_container">
-    <i
-      class="uil uil-times form_close"
-      v-if="(showLoginForm = true)"
-      @click="showLoginForm = false"
-    ></i>
-    <!-- Login From -->
-    <div class="form login_form">
-      <form action="#">
-        <h2>Login</h2>
-        <div class="input_box">
-          <input type="email" placeholder="Enter your email" required />
-          <i class="uil uil-envelope-alt email"></i>
-        </div>
-        <div class="input_box">
-          <input type="password" placeholder="Enter your password" required />
-          <i class="uil uil-lock password"></i>
-          <i class="uil uil-eye-slash pw_hide"></i>
-        </div>
-        <div class="option_field">
-          <span class="checkbox">
-            <input type="checkbox" id="check" />
-            <label for="check">Remember me</label>
-          </span>
-          <a href="#" id="forgetpswrd" class="forgot_pw">Forgot password?</a>
-        </div>
+  <div class="form signup_form">
+    <form class="signup_form" action="#">
+      <h2>Signup</h2>
+      <div class="input_box">
+        <input type="name" placeholder="Enter your name" required />
+        <i class="uil uil-user-md"></i>
+      </div>
+      <div class="input_box">
+        <input type="email" placeholder="Enter your email" required />
+        <i class="uil uil-envelope-alt email"></i>
+      </div>
+      <div class="input_box">
+        <input type="password" placeholder="Enter your password" required />
+        <i class="uil uil-lock password"></i>
+        <i class="uil uil-eye-slash pw_hide"></i>
+      </div>
+      <div class="option_field">
+        <span class="checkbox">
+          <input type="checkbox" id="check" />
+          <label for="check">Remember me</label>
+        </span>
+        <a href="#" id="forgetpswrd" class="forgot_pw">Forgot password?</a>
+      </div>
 
-        <button class="button">Login</button>
-        <div class="login_signup">
-          Don't have an account?
-          <a @click="showSignupForm = true" href="#" id="signup">Signup</a>
-          <SignupForm @click="showSignupForm = true" />
-        </div>
-      </form>
-    </div>
+      <button class="button">Signup</button>
+      <div class="login_signup">
+        Already have an account?
+        <a href="#" id="login">Login</a>
+      </div>
+    </form>
   </div>
-  <SignupForm></SignupForm>
 </template>
-
 <script>
-import SignupForm from "./SignUp.vue";
 export default {
-  name: "LoginForm",
-  closeLoginForm() {
+  name: "SignupForm",
+  closeSignupForm() {
     this.$emit("close");
   },
   data() {
     return {
-      activeForm: "login_form",
-      showLoginForm: true,
-      showSignupForm: false,
+      activeForm: "signup_form",
     };
-  },
-  components: {
-    SignupForm,
   },
 };
 </script>
-
 <style>
 .form_container {
   position: fixed;
