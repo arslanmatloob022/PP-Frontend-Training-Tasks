@@ -1,10 +1,6 @@
 <template>
-  <link
-    rel="stylesheet"
-    href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
-  />
-  <div class="form_container">
-    <i class="uil uil-times form_close"></i>
+  <div class="form_container" v-show="showSignupForm">
+    <i @click="closeSignupForm" class="uil uil-times form_close"></i>
     <!-- Login From -->
     <div class="form login_form">
       <form action="#">
@@ -35,24 +31,24 @@
     </div>
   </div>
 </template>
-
 <script>
 export default {
   name: "SignupForm",
-  closeSignup() {
-    this.$emit("close");
-  },
   data() {
     return {
       showSignupForm: true,
-      showLoginForm: false,
     };
+  },
+  methods: {
+    closeSignupForm() {
+      this.showSignupForm = false;
+    },
   },
   components: {},
 };
 </script>
 
-<style scoped>
+<style>
 .form_container {
   position: fixed;
   max-width: 280px;

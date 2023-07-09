@@ -4,7 +4,7 @@
     href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
   />
   <div class="form_container">
-    <i class="uil uil-times form_close"></i>
+    <i @click="showSignupForm = false" class="uil uil-times form_close"></i>
     <!-- Login From -->
     <div class="form login_form">
       <form action="#">
@@ -36,12 +36,12 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 export default {
   name: "SignupForm",
-  closeSignup() {
-    this.$emit("close");
-  },
+  //   closeSignup() {
+  //     this.$emit("close");
+  //   },
   data() {
     return {
       showSignupForm: true,

@@ -11,29 +11,25 @@
 
       <ul class="nav_items">
         <li class="nav_item">
-          <a href="#" class="nav_link"
-            ><span><i class="uil uil-home"></i></span>Home</a
+          <router-link to="/">
+            <a href="#" class="nav_link"
+              ><span><i class="uil uil-home"></i></span>Home</a
+            ></router-link
           >
-          <a href="#" class="nav_link"
-            ><span><i class="uil uil-create-dashboard"></i></span>Dashboard</a
-          >
-          <a href="#" class="nav_link"
-            ><span><i class="uil uil-setting"></i></span> Configuration</a
-          >
-          <a href="#" class="nav_link"
-            ><span><i class="uil uil-users-alt"></i></span> Members</a
+          <router-link to="/dashboard">
+            <a href="#" class="nav_link"
+              ><span><i class="uil uil-home"></i></span>Dashboard</a
+            ></router-link
           >
           <a href="#" class="nav_link"
             ><span><i class="uil uil-fast-mail-alt"></i></span> Contact</a
           >
+          <RegisterUser
+            v-if="showRegisterUser"
+            @close="showRegisterUser = false"
+          />
 
-          <a @click="showSignupForm = true" href="#" class="nav_link"
-            ><span>
-              <i class="uil uil-user-plus"></i>
-            </span>
-            Add Member</a
-          >
-          <SignupForm v-if="showSignupForm" @close="showSignupForm = false" />
+          <!-- <SignupForm /> -->
         </li>
       </ul>
 
@@ -41,37 +37,33 @@
       <LoginForm v-if="showLoginForm" @close="showLoginForm = false" />
     </nav>
   </header>
-  <WelcomeDisplay />
 </template>
-
-<script>
-import SignupForm from "./components/SignUp.vue";
-import LoginForm from "./components/loginForm.vue";
-import WelcomeDisplay from "./components/welcomedisp.vue";
-
+<script lang="ts">
+import LoginForm from "./LoginForm.vue";
+import RegisterUser from "./RegisterUser.vue";
 export default {
-  name: "App",
+  name: "Header",
   components: {
-    WelcomeDisplay,
     LoginForm,
-    SignupForm,
+    RegisterUser,
   },
   data() {
     return {
       showLoginForm: false,
-      showSignupForm: false,
+      showRegisterUser: false,
     };
   },
 };
 </script>
 
-<style>
+<style scoped>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: "Poppins", sans-serif;
   background-color: #f2f5ff;
+  margin: 0;
 }
 
 /* Header STyle*/
@@ -90,6 +82,8 @@ a:hover {
 }
 
 .header {
+  box-sizing: border-box;
+  margin: 0;
   height: 60px;
   width: 100%;
   z-index: 100;

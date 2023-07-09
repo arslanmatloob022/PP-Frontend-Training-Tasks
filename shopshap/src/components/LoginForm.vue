@@ -1,24 +1,28 @@
 <template>
-  <link
-    rel="stylesheet"
-    href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
-  />
-  <div class="form_container">
-    <i
-      class="uil uil-times form_close"
-      v-if="(showLoginForm = true)"
-      @click="showLoginForm = false"
-    ></i>
+  <div class="form_container" v-show="showLoginForm">
+    <i class="uil uil-times form_close" @click="closeForm"></i>
     <!-- Login From -->
     <div class="form login_form">
       <form action="#">
         <h2>Login</h2>
         <div class="input_box">
-          <input type="email" placeholder="Enter your email" required />
+          <input
+            name="email"
+            type="email"
+            placeholder="Enter your email"
+            v-model="email"
+            required
+          />
           <i class="uil uil-envelope-alt email"></i>
         </div>
         <div class="input_box">
-          <input type="password" placeholder="Enter your password" required />
+          <input
+            type="password"
+            name="password"
+            v-model="password"
+            placeholder="Enter your password"
+            required
+          />
           <i class="uil uil-lock password"></i>
           <i class="uil uil-eye-slash pw_hide"></i>
         </div>
@@ -30,28 +34,65 @@
           <a href="#" id="forgetpswrd" class="forgot_pw">Forgot password?</a>
         </div>
 
-        <button class="button">Login</button>
+        <button type="submit" @click="login" class="button">Login</button>
       </form>
     </div>
   </div>
 </template>
-
 <script>
 export default {
-  name: "LoginForm",
-  closeLoginForm() {
-    this.$emit("close");
-  },
   data() {
     return {
       showLoginForm: true,
+      email: "",
+      password: "",
     };
   },
-  components: {},
+  methods: {
+    async login() {
+      // const apiUrl = "https://champagne-bandicoot-hem.cyclic.app";
+      const url = `https://champagne-bandicoot-hem.cyclic.app/user/login`;
+      const body = {
+        email: this.email,
+        password: this.password,
+      };
+
+      try {
+        const response = await fetch(url, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(body),
+        });
+        alert("Authenticating...");
+        const data = await response.json();
+
+        if (response.ok) {
+          // Login successful
+          const token = data.Token;
+
+          // Store the token or use it for subsequent API requests
+          console.log("Login successful");
+          console.log("Token:", token);
+          this.$router.push("/dashboard");
+        } else {
+          window.alert("Wrong Username or Password!");
+          console.log("No user Login failed:", data.error);
+        }
+      } catch (error) {
+        alert("Error ", error);
+        console.error("Error:", error);
+      }
+    },
+    closeForm() {
+      this.showLoginForm = false;
+    },
+  },
 };
 </script>
 
-<style>
+<style scoped>
 .form_container {
   position: fixed;
   max-width: 320px;
@@ -93,6 +134,7 @@ export default {
 }
 .input_box {
   position: relative;
+  background-color: #0f0a0a;
   box-sizing: border-box;
   margin-top: 30px;
   width: 100%;
@@ -112,6 +154,7 @@ export default {
   border-bottom: 1.5px solid #aaaaaa;
 }
 .input_box input:focus {
+  background-color: #0f0a0a;
   border-color: rgba(18, 216, 121, 1);
 }
 .input_box i {

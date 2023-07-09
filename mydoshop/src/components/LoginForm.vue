@@ -4,136 +4,160 @@
     href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
   />
   <div class="form_container">
-    <i class="uil uil-times form_close"></i>
+    <i
+      class="uil uil-times form_close"
+      v-if="(showLoginForm = true)"
+      @click="showLoginForm = false"
+    ></i>
     <!-- Login From -->
     <div class="form login_form">
       <form action="#">
-        <h2>Register User</h2>
+        <h2>Login</h2>
         <div class="input_box">
-          <input type="text" placeholder="Enter Name" required />
-          <i class="uil uil-user-md name"></i>
-        </div>
-        <div class="input_box">
-          <input type="email" placeholder="Enter Email" required />
+          <input type="email" placeholder="Enter your email" required />
           <i class="uil uil-envelope-alt email"></i>
         </div>
         <div class="input_box">
-          <input type="password" placeholder="Enter Password" required />
+          <input type="password" placeholder="Enter your password" required />
           <i class="uil uil-lock password"></i>
           <i class="uil uil-eye-slash pw_hide"></i>
         </div>
-        <div class="input_box">
-          <input type="role" placeholder="Enter Role" required />
-          <i class="uil uil-user-exclamation name"></i>
+        <div class="option_field">
+          <span class="checkbox">
+            <input type="checkbox" id="check" />
+            <label for="check">Remember me</label>
+          </span>
+          <a href="#" id="forgetpswrd" class="forgot_pw">Forgot password?</a>
         </div>
-        <div class="input_box">
-          <input type="array" placeholder="Enter Permissions" required />
-          <i class="uil uil-user-check name"></i>
-        </div>
-        <button class="button">Register</button>
+
+        <button class="button">Login</button>
       </form>
     </div>
   </div>
 </template>
 
-<script>
+<script lang="ts">
+// import axios from "axios";
+
 export default {
-  name: "SignupForm",
-  closeSignup() {
-    this.$emit("close");
+  name: "LoginForm",
+  props: {
+    email: {
+      type: String,
+      require: true,
+    },
+    password: {
+      type: String,
+      require: true,
+    },
   },
   data() {
     return {
-      showSignupForm: true,
-      showLoginForm: false,
+      showLoginForm: true,
     };
   },
+  //   methods: {
+  //     async login() {
+  //       try {
+  //         const response = await axios.post(
+  //           "${https://champagne-bandicoot-hem.cyclic.app/}user/login",
+  //           {
+  //             email: this.email,
+  //             password: this.password,
+  //           }
+  //         );
+  //         const authToken = response.data.token;
+  //         localStorage.setItem("authToken", authToken);
+  //         this.$router.push("/dashboard");
+  //       } catch (error) {
+  //         console.error(error);
+  //       }
+  //     },
+  //   },
   components: {},
 };
 </script>
 
-<style scoped>
+<style>
 .form_container {
   position: fixed;
-  max-width: 280px;
+  max-width: 320px;
   width: 100%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1.2);
   z-index: 101;
   background: #0f0a0a;
-  padding: 20px;
+  padding: 25px;
   border-radius: 28px 0px;
   border: 2px solid black;
   box-sizing: border-box;
   box-shadow: rgba(0, 0, 0, 0.1);
+  /*opacity: 0;
+  pointer-events: none;*/
   transition: all 0.4s ease-out;
 }
 .form_close {
   position: absolute;
   top: 10px;
   right: 20px;
-  color: #16db65;
+  color: rgba(18, 216, 121, 1);
   font-size: 22px;
   opacity: 0.8;
   cursor: pointer;
 }
 .form_close:hover {
   border-radius: 5px 0px;
-  background-color: #16db65;
+  background-color: rgba(18, 216, 121, 1);
   color: white;
   opacity: 1;
   cursor: pointer;
 }
 .form_container h2 {
   font-size: 22px;
-  color: #16db65;
+  color: rgba(18, 216, 121, 1);
   text-align: center;
 }
 .input_box {
   position: relative;
   box-sizing: border-box;
-  margin-top: 10px;
+  margin-top: 30px;
   width: 100%;
   height: 40px;
 }
 .input_box input {
-  left: 0;
-  position: absolute;
   box-sizing: border-box;
+  position: absolute;
   height: 100%;
   width: 100%;
   border: none;
   outline: none;
-  padding: 0 20px;
+  padding: 0 30px;
   background-color: #0f0a0a;
   color: rgb(236, 228, 228);
   transition: all 0.2s ease;
   border-bottom: 1.5px solid #aaaaaa;
 }
 .input_box input:focus {
-  border-color: #16db65;
+  border-color: rgba(18, 216, 121, 1);
 }
 .input_box i {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  font-size: 16px;
-  color: #16db65;
+  font-size: 20px;
+  color: rgba(18, 216, 121, 1);
 }
 .input_box i.email,
-.input_box i.name {
-  left: 0;
-}
 .input_box i.password {
   left: 0;
 }
 .input_box input:focus ~ i.email,
 .input_box input:focus ~ i.password {
-  color: #16db65;
+  color: rgba(18, 216, 121, 1);
 }
 .input_box i.pw_hide {
-  color: #16db65;
+  color: rgba(18, 216, 121, 1);
   right: 0;
   font-size: 18px;
   cursor: pointer;
@@ -148,7 +172,7 @@ export default {
 }
 .form_container a {
   text-decoration: none;
-  color: #16db65;
+  color: rgba(18, 216, 121, 1);
   font-size: 12px;
 }
 .form_container a:hover {
@@ -160,22 +184,22 @@ export default {
   white-space: nowrap;
 }
 .checkbox input {
-  accent-color: #16db65;
+  accent-color: rgba(18, 216, 121, 1);
 }
 .checkbox label {
   font-size: 12px;
   cursor: pointer;
   user-select: none;
-  color: #16db65;
+  color: rgba(18, 216, 121, 1);
 }
 .form_container .button {
   background: #0f0a0a;
-  border: 2px solid #16db65;
+  border: 2px solid rgba(18, 216, 121, 1);
   margin-top: 30px;
   width: 100%;
   padding: 7px 0;
   border-radius: 10px 0px;
-  color: #16db65;
+  color: rgba(18, 216, 121, 1);
   font-size: 16px;
 }
 
@@ -183,7 +207,7 @@ export default {
   font-size: 12px;
   text-align: center;
   margin-top: 15px;
-  color: #16db65;
+  color: rgba(18, 216, 121, 1);
 }
 
 .signup_form {

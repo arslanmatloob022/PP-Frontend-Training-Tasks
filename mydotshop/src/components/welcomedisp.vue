@@ -37,7 +37,7 @@ export default {
 .wellcomeTile {
   display: flex;
   align-items: center;
-  border: 2px solid orangered;
+  border: 2px solid #16db65;
   border-radius: 15px;
   backdrop-filter: blur(8px);
   width: 80%;
@@ -60,27 +60,29 @@ export default {
   margin-bottom: 20px;
   font-weight: 700;
   transition: color 0.4s ease-out;
-  color: rgb(15, 250, 137);
+  color: #0f0a0a;
   display: inline-block;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
 }
 .welcomeText:hover {
-  color: whitesmoke;
-  cursor: default;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
 }
 .welcomeTextp {
   margin-bottom: 20px;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   transition: color 0.4s ease-out;
-  color: rgba(15, 250, 137);
+  color: #0f0a0a;
 }
 .welcomeTextp:hover {
-  cursor: default;
-  color: whitesmoke;
+  font-weight: bolder;
+  cursor: pointer;
+  color: black;
 }
 .images img {
-  border: 1px solid orangered;
+  border: 1px solid #16db65;
   border-radius: 20px;
   width: 400px;
   height: 380px;
@@ -89,7 +91,7 @@ export default {
   float: right;
   padding: 7px 20px;
   border-radius: 10px;
-  border: 3px solid orangered;
+  border: 3px solid #16db65;
   color: orangered;
 }
 </style>
