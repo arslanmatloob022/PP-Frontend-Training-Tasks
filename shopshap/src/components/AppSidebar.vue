@@ -56,19 +56,16 @@ export default {
     };
   },
   mounted() {
-    // Add the script dynamically to the DOM
     const script = document.createElement("script");
     script.innerHTML = `
       var mini = true;
 
       function toggleSidebar() {
         if (mini) {
-          console.log("opening sidebar");
           document.getElementById("mySidebar").style.width = "250px";
           document.getElementById("main").style.marginLeft = "255px";
           mini = false;
         } else {
-          console.log("closing sidebar");
           document.getElementById("mySidebar").style.width = "80px";
           document.getElementById("main").style.marginLeft = "85px";
           mini = true;

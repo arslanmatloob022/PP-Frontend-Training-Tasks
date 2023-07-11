@@ -1,22 +1,27 @@
 <template>
   <AppHeader></AppHeader>
   <AppSidebar></AppSidebar>
+
   <div id="main">
     <h2>jelloooooo dashboard</h2>
     <h2>jelloooooo dashboard</h2>
     <h2>jelloooooo dashboard</h2>
+    <users-view></users-view>
   </div>
 </template>
 <script>
 import AppHeader from "@/components/AppHeader.vue";
 import AppSidebar from "@/components/AppSidebar.vue";
+import UsersView from "@/components/UsersView.vue";
 export default {
   name: "dashboard",
   components: {
     AppSidebar,
+    UsersView,
   },
 };
 </script>
+ProductsView
 
 <style>
 #main {

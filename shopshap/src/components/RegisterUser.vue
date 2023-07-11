@@ -1,6 +1,6 @@
 <template>
   <div class="form_container" v-show="showSignupForm">
-    <i @click="closeSignupForm" class="uil uil-times form_close"></i>
+    <i class="uil uil-times form_close" @click="closeSignupForm"></i>
     <!-- Login From -->
     <div class="form login_form">
       <form action="#">

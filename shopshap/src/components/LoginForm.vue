@@ -34,7 +34,7 @@
           <a href="#" id="forgetpswrd" class="forgot_pw">Forgot password?</a>
         </div>
 
-        <button type="submit" @click="login" class="button">Login</button>
+        <button @click="login" class="button">Login</button>
       </form>
     </div>
   </div>
@@ -62,6 +62,7 @@ export default {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
+            Authorization: "Bearer ${token}",
           },
           body: JSON.stringify(body),
         });
@@ -75,6 +76,7 @@ export default {
           // Store the token or use it for subsequent API requests
           console.log("Login successful");
           console.log("Token:", token);
+
           this.$router.push("/dashboard");
         } else {
           window.alert("Wrong Username or Password!");
