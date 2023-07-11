@@ -1,5 +1,26 @@
 <template>
   <h2>This is App Landing</h2>
+  <section class="landing-section">
+    <div class="row content section-data">
+      <div class="col-12 col-sm-12 col-md-12 col-lg-6 section-text">
+        <h1 class="animated-text">Bring your team together</h1>
+        <p class="animated-text quote-text">
+          At the heart of Slack are channels: organized spaces for everyone and
+          everything you need for work. In channels, it’s easier to connect
+          across departments, offices, time zones and even other companies
+        </p>
+      </div>
+      <video
+        autoplay
+        loop
+        class="col-12 col-sm-12 col-md-12 col-lg-6"
+        style="float:left width:100%; height:600px"
+      >
+        <source src="../images/videos/SlackLanding.webm" type="video/webm" />
+        <source src="../images/videos/SlackLanding.webm" type="video/webm" />
+      </video>
+    </div>
+  </section>
   <section
     class="first-section first-section-companies v--borderless section-background-hec bottom-padding"
   >
@@ -32,18 +53,19 @@
       </div>
     </div>
   </section>
+
   <section class="second-section section-background-hec">
     <div class="row content section-data">
       <video
         autoplay
         loop
-        class="col-6 col-sm-12 col-md-6 col-lg-6"
+        class="col-12 col-sm-12 col-md-12 col-lg-6"
         style="float:left width:100%; height:400px"
       >
         <source src="../images/videos/slackPromovideo.webm" type="video/webm" />
         <source src="../images/videos/slackPromovideo.webm" type="video/webm" />
       </video>
-      <div class="col-6 col-sm-12 col-md-6 col-lg-6 section-text">
+      <div class="col-12 col-sm-12 col-md-12 col-lg-6 section-text">
         <h1 class="animated-text">Bring your team together</h1>
         <p class="animated-text quote-text">
           At the heart of Slack are channels: organized spaces for everyone and
@@ -53,9 +75,10 @@
       </div>
     </div>
   </section>
+
   <section class="second-section section-background-hec">
     <div class="row content section-data">
-      <div class="col-6 col-sm-12 col-md-6 col-lg-6 section-text">
+      <div class="col-12 col-sm-12 col-md-12 col-lg-6 section-text">
         <h1 class="animated-text">Choose how you want to work</h1>
         <p class="animated-text quote-text">
           In Slack, you’ve got all the flexibility to work when, where and how
@@ -66,7 +89,7 @@
       <video
         autoplay
         loop
-        class="col-6 col-sm-12 col-md-6 col-lg-6"
+        class="col-12 col-sm-12 col-md-12 col-lg-6"
         style="float:left width:100%; height:400px"
       >
         <source src="../images/videos/slackChoose.webm" type="video/webm" />
@@ -80,13 +103,13 @@
       <video
         autoplay
         loop
-        class="col-6 col-sm-12 col-md-6 col-lg-6"
+        class="col-12 col-sm-12 col-md-12 col-lg-6"
         style="float:left width:100%; height:400px"
       >
         <source src="../images/videos/slackMovefaster.webm" type="video/webm" />
         <source src="../images/videos/slackMovefaster.webm" type="video/webm" />
       </video>
-      <div class="col-6 col-sm-12 col-md-6 col-lg-6 section-text">
+      <div class="col-12 col-sm-12 col-md-12 col-lg-6 section-text">
         <h1 class="animated-text">Move faster with your tools in one place</h1>
         <p class="animated-text quote-text">
           Automate away routine tasks with the power of generative AI and
@@ -100,6 +123,10 @@
 
 <script></script>
 <style>
+/* Landing Section */
+.landing-section {
+  background-color: purple;
+}
 /* first Section comapanies bar  styling*/
 .first-section.v--borderless {
   border: none;
