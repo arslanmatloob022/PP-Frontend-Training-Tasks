@@ -1,5 +1,4 @@
 <template>
-  <h2>This is App Landing</h2>
   <section class="landing-section">
     <div class="row content section-data">
       <div class="col-12 col-sm-12 col-md-12 col-lg-6 section-text">
@@ -14,7 +13,7 @@
         autoplay
         loop
         class="col-12 col-sm-12 col-md-12 col-lg-6"
-        style="float:left width:100%; height:600px"
+        style="float:left width:100%; height:500px"
       >
         <source src="../images/videos/SlackLanding.webm" type="video/webm" />
         <source src="../images/videos/SlackLanding.webm" type="video/webm" />
@@ -123,9 +122,39 @@
 
 <script></script>
 <style>
+/* Section Nav */
+.landing-section .section-nav {
+  background-color: purple;
+  display: flex;
+  align-items: center;
+  height: 70px;
+}
+.logo-nav {
+  cursor: pointer;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logo-nav h1 {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  color: #f4ede4;
+  margin-left: 4px;
+}
+.links-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.links-nav a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #f4ede4;
+}
 /* Landing Section */
 .landing-section {
-  background-color: purple;
+  background-color: rgb(116, 7, 116);
 }
 /* first Section comapanies bar  styling*/
 .first-section.v--borderless {

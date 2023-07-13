@@ -1,5 +1,7 @@
 <template>
+  <app-nav-bar></app-nav-bar>
   <app-landing-view></app-landing-view>
+
   <!-- <nav>
     <router-link to="/">Home</router-link> |
     <router-link to="/about">About</router-link>
@@ -7,9 +9,11 @@
   <router-view />
 </template>
 <script>
+import AppNavBar from "./components/AppNavBar.vue";
 import AppLandingView from "./views/AppLandingView.vue";
 export default {
   components: {
+    AppNavBar,
     AppLandingView,
   },
 };
