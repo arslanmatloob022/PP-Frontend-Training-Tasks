@@ -66,7 +66,7 @@
       type="button"
       @click="toggleMenu"
     >
-      <span class="navbar-toggler-icon"></span>
+      <i class="uil uil-bars"></i>
     </button>
   </nav>
 </template>
@@ -199,14 +199,22 @@ export default {
 @media (max-width: 767px) {
   .navbar .navbar-nav {
     flex-direction: column;
+    height: 300px;
   }
 
   .navbar-toggler {
-    margin-top: 5px;
+    width: 40px;
+    height: 40px;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    padding: 8px;
   }
 
   .navbar-nav .nav-item {
-    margin-bottom: 10px;
+    margin-bottom: 5px;
   }
 
   .navbar-nav .nav-link {
@@ -215,6 +223,10 @@ export default {
 
   .ml-auto {
     margin-left: auto !important;
+  }
+
+  .navbar-buttons {
+    display: none;
   }
 }
 </style>
